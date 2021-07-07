@@ -1,13 +1,16 @@
-# Administracion-de-Drones-Proyecto-universidad ![alt text](https://travis-ci.com/aitorru/Administracion-de-Drones-Proyecto-universidad.svg?token=RrKbwC6VUpYoEbmNPvjQ&branch=master) ![GitHub All Releases](https://img.shields.io/github/downloads/aitorru/Administracion-de-Drones-Proyecto-universidad/total) ![GitHub last commit](https://img.shields.io/github/last-commit/aitorru/Administracion-de-Drones-Proyecto-universidad) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/aitorru/Administracion-de-Drones-Proyecto-universidad) :fire:
+# Administracion-de-Drones-Proyecto-universidad
+___
+![alt text](https://travis-ci.com/aitorru/Administracion-de-Drones-Proyecto-universidad.svg?token=RrKbwC6VUpYoEbmNPvjQ&branch=master) ![GitHub All Releases](https://img.shields.io/github/downloads/aitorru/Administracion-de-Drones-Proyecto-universidad/total) ![GitHub last commit](https://img.shields.io/github/last-commit/aitorru/Administracion-de-Drones-Proyecto-universidad) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/aitorru/Administracion-de-Drones-Proyecto-universidad)
+___
 
 Proyecto para administrar una red de drones de reparto a nivel de España.
 
 ## Mapa (Parte izquierda)
 
-![Alt text](mapa.PNG?raw=true "Title")
-Usando una imagen de OpenStreetMaps vamos a hacer una simulacion de donde estan los drones en este momento.
-![Alt text](14466.png?raw=true "Title")
+<img aling="right" src="./drones/src/main/resources/mapa.png" width="430px"/>
+<img aling="right" src="./drones/src/main/resources/fotodron.png" width="100px"/>
 
+Usando una imagen de OpenStreetMaps vamos a hacer una simulacion de donde estan los drones en este momento.
 Con un modelo de un dron basico lo moveremos por el mapa simulando el paso del tiempo
 
 ## Administracion (Parte derecha)
@@ -133,7 +136,7 @@ public void UpdateCoordenadasX(int coordenadasX, int id){
             psmt.setInt(2, id);
             psmt.executeUpdate();
             psmt.close();
-            
+
         } catch (Exception e) {
             //TODO: handle exception
             e.printStackTrace();
@@ -147,7 +150,7 @@ public void UpdateCoordenadasX(int coordenadasX, int id){
             psmt.setInt(2, id);
             psmt.executeUpdate();
             psmt.close();
-            
+
         } catch (Exception e) {
             //TODO: handle exception
             e.printStackTrace();
@@ -197,20 +200,23 @@ public void eliminarDatos(int id){
 
 > Jon Ibarreche
 
-- [ ] Investigación
+- [X] Investigación
+
+> Jon Ibarreche & Aitor Ruiz
+
+<img aling="center" src="./drones/src/main/resources/login.PNG" width="430px"/>
 
 > Aitor Ruiz
 
 - [X] Creacion de metodo de criptografia para acceso a pantalla
 
 ```java
-public static byte[] getSHA(String input) throws NoSuchAlgorithmException {    
+public static byte[] getSHA(String input) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");  
         return md.digest(input.getBytes(StandardCharsets.UTF_8));  
-    } 
-    
+    }
     public static String toHexString(byte[] hash) {  
-        BigInteger number = new BigInteger(1, hash);    
+        BigInteger number = new BigInteger(1, hash);
         StringBuilder hexString = new StringBuilder(number.toString(16));  
         while (hexString.length() < 32){  
             hexString.insert(0, '0');  
@@ -227,7 +233,7 @@ public static byte[] getSHA(String input) throws NoSuchAlgorithmException {
     }
 ```
 
-- [X] Ejemplo para lectura de datos rapid
+- [X] Ejemplo para lectura de datos rapida
 
 ```java
         userDB u = new userDB();
@@ -247,14 +253,106 @@ public static byte[] getSHA(String input) throws NoSuchAlgorithmException {
 
 > Jon Ibarreche
 
-- [ ] Investigación
+- [X] Investigación
 
+> Jon Ibarreche & Aitor Ruiz
+
+<img aling="center" src="./drones/src/main/resources/contro.PNG" width="430px"/>
 
 ## Ventana de mapa
 
 > Sergio Salgado
 
 - [ ] Investigación
+
+<img aling="center" src="./drones/src/main/resources/mapaGUI.PNG" width="430px"/>
+
+
+## Javadoc
+
+[JavaDoc](https://aitorru.github.io/Administracion-de-Drones-Proyecto-universidad)
+
+> Muestra del javadoc
+
+## Build // Ejecutar
+
+### Windows
+
+### EXE
+
+Puedes simplemente descargar el [exe](https://github.com/aitorru/Administracion-de-Drones-Proyecto-universidad/releases/download/0.2/Administrador.exe)
+
+### JAR
+
+Tambien puedes descargar el [jar](https://github.com/aitorru/Administracion-de-Drones-Proyecto-universidad/releases/download/0.4/drones-0.4.jar) directamente y ejecutarlo con
+
+```bash
+java -jar drones-*.*.jar
+```
+
+### Maven
+
+Si estas interesado puedes crear el jar desde el proyecto.
+
+```bash
+git clone https://github.com/aitorru/Administracion-de-Drones-Proyecto-universidad.git
+```
+
+Ahora hay que navegar a Administracion-de-Drones-Proyecto-universidad/drones
+
+```bash
+cd Administracion-de-Drones-Proyecto-universidad/drones
+```
+
+Y falta con ejecutar lo siguiente
+
+```bash
+mvn package
+```
+
+Los Jar resultantes estan en Administracion-de-Drones-Proyecto-universidad/drones/target
+
+```bash
+cd target
+```
+
+## LINUX & MAC
+
+### JAR
+
+Actualmente solo esta disponible en windows de instalador, por lo cual hay que usar el [Jar](https://github.com/aitorru/Administracion-de-Drones-Proyecto-universidad/releases/download/0.4/drones-0.4.jar)
+
+Ejecutalo con
+
+```bash
+java -jar drones-*.*-SNAPSHOT-jar-with-dependencies.jar
+```
+
+### Maven
+
+Si estas interesado puedes crear el jar desde el proyecto.
+
+```bash
+git clone https://github.com/aitorru/Administracion-de-Drones-Proyecto-universidad.git
+```
+
+Ahora hay que navegar a Administracion-de-Drones-Proyecto-universidad/drones
+
+```bash
+cd Administracion-de-Drones-Proyecto-universidad/drones
+```
+
+Y falta con ejecutar lo siguiente
+
+```bash
+mvn package
+```
+
+Los Jar resultantes estan en Administracion-de-Drones-Proyecto-universidad/drones/target
+
+```bash
+cd target
+```
 
 ## Autores
 
@@ -265,7 +363,8 @@ public static byte[] getSHA(String input) throws NoSuchAlgorithmException {
 ## Creado con // Dependencies
 
 [Jython](https://mvnrepository.com/artifact/org.python/jython)
-```
+
+```xml
 <dependencies>
     <dependency>
       <groupId>org.python</groupId>
@@ -273,16 +372,30 @@ public static byte[] getSHA(String input) throws NoSuchAlgorithmException {
       <version>2.7.0</version>
     </dependency>
 ```
+
 [SQLite](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc)
-```
+
+```xml
     <dependency>
       <groupId>org.xerial</groupId>
       <artifactId>sqlite-jdbc</artifactId>
       <version>3.28.0</version>
     </dependency>
 ```
-[JUnit](https://mvnrepository.com/artifact/junit/junit)
+
+[JSON](https://mvnrepository.com/artifact/org.json/json)
+
+```xml
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20190722</version>
+    </dependency>
 ```
+
+[JUnit](https://mvnrepository.com/artifact/junit/junit)
+
+```xml
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - PanelMapa",
+            "request": "launch",
+            "mainClass": "com.administracion.PanelMapa",
+            "projectName": "drones"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "com.administracion.App",
+            "projectName": "drones"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BackEndAdmin",
+            "request": "launch",
+            "mainClass": "com.AdministracionDrones.BackEndAdmin",
+            "projectName": "drones"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - panel_control",
             "request": "launch",
             "mainClass": "com.AdministracionDrones.panel_control",
